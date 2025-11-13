@@ -57,4 +57,4 @@ Functions:
         options:
             -h, --help  show its help message and exit
 
-Developed by Manuel Sandoval Arroyo & Juan Arturo Espejel Baez
+Developed by Manuel Sandoval Arroyo, Juan Arturo Espejel Baez, Javier Belmont Zúñiga & Julián Humberto Reyes Ríos
