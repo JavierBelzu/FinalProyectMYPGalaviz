@@ -4,8 +4,8 @@
 
 To start working with it (beta), type on the terminal inside 
 the main folder:
-
-    python3 -m app.main [-h] {add,ls,find,complete,delete,save}
+    source venv/bin/activate
+    python manage.py runserver
 
 To export the html file:
 

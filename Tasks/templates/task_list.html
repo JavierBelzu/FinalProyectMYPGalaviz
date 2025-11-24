@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <title>Task List</title>
 </head>
 <body>
-    <h1>Task List</h1>
-    <ul>
-        {% for task in tasks %}
-            <li><strong>{{ task.title }}</strong> - {{ task.description }} - {% if task.completed %}Completed{% else %}Pending{% endif %}</li>
-        {% endfor %}
-    </ul>
+    
+    <section class = "section">
+        <div class="container">
+
+            <h1 class="title">Task List</h1>
+            <div class = "container">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Priority</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Tags</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                            <tr class="{% if task.completed %}is-success{% endif %}">
+                                <td>{{ task.id }}</td>
+                                <td>{{ task.title }}</td>
+                                <td>{{ task.priority }}</td>
+                                <td>{{ task.date }}</td>
+                                <td>{{ task.description }}</td>
+                                <td>
+                                    {% if task.tags and task.tags|length > 0%}
+                                        {{ task.tags|join:", " }}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if task.completed %}Sí{% else %}No{% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+        
+    
 </body>
 </html>
