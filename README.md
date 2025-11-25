@@ -4,6 +4,7 @@
 
 To start working with it (beta), type on the terminal inside 
 the main folder:
+
     source venv/bin/activate
     python manage.py runserver
 
