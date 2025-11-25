@@ -27,7 +27,7 @@
                     </thead>
                     <tbody>
                         {% for task in tasks %}
-                            <tr class="{% if task.completed %}is-success{% endif %}">
+                            <tr class="{% if not task.completed %}is-success{% endif %}">
                                 <td>{{ task.id }}</td>
                                 <td>{{ task.title }}</td>
                                 <td>{{ task.priority }}</td>
